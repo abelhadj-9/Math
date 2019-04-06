@@ -1,0 +1,30 @@
+       // CH 4 P2 - factorials
+       
+        int n = 0;
+        Scanner reader = new Scanner(System.in);
+
+
+        boolean isValid = true;
+        while(isValid) {
+            System.out.println("Enter a number to determine factorial: ");
+            n = reader.nextInt();
+            if (n<0) {
+                System.out.println("Out of range");
+            }
+            else {
+                isValid = false;
+            }
+        }
+        reader.close();
+
+
+
+        int result = 1;
+        for (int ix = n; ix>1; ix--) {
+            result = ix * result;
+            }
+        System.out.println("The factorial of " + n + " is equal to " + result);
+
+    }
+
+}
